@@ -10,11 +10,11 @@ import java.util.List;
 @RestController
 @RequestMapping("students")
 public class StudentController {
-    private static List<Student> students = Arrays.asList(
+    private static List<Student> students = new ArrayList<>(Arrays.asList(
             new Student(1, "Aboba", "Computer Science", true),
             new Student(2, "Obabo", "Computer Science", false),
             new Student(3, "Ababa", "Management and administration", true)
-    );
+    ));
 
     @GetMapping("")
     public ResponseEntity<List<Student>> getAllStudents() {
